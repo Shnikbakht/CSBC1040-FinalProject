@@ -1,0 +1,50 @@
+# README
+
+## Setting up the Project
+
+### Prerequisites
+- Node.js installed on your machine
+- npm or yarn installed on your machine
+- MySQL installed and running
+
+### Installation
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` or `yarn install` to install dependencies.
+
+### Database Configuration
+1. Ensure MySQL is installed and running.
+2. Create a MySQL database for the project.
+
+### Sequelize Configuration
+1. Open `config/config.json` file.
+2. Update the development, test, and production configurations with your MySQL database credentials.
+
+### Seed Database
+1. Ensure MySQL is running and your database is created.
+2. Run `npm run seedDatabase` or `yarn seedDatabase` to populate your database with data from https://jsonplaceholder.typicode.com/.
+
+### Environment Setup
+1. Create a `.env` file in the root directory of the project.
+2. Define the following environment variables:
+
+
+## Testing
+
+### Unit Tests
+1. Run `npm test` or `yarn test` to execute unit tests.
+
+### End-to-End Tests
+1. Run `npm run test:e2e` or `yarn test:e2e` to execute end-to-end tests.
+
+## API Requests
+1. Install the REST client extension for VSCode.
+2. Open the `request.rest` file provided in the project.
+3. Click on each request to open it.
+4. Click on the "Send Request" button at the top right corner of each request to send it.
+5. The response will be displayed below the request.
+
+## Running the Server
+1. Set the `NODE_ENV` environment variable to `test`.
+2. Run `npm start` or `yarn start` to start the server in the test environment.
+

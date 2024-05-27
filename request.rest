@@ -1,0 +1,84 @@
+# Get all users
+GET http://localhost:3000/users
+
+###
+
+# Login user
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "Bret",
+  "password": "Bret"
+}
+
+###
+
+# Get all posts
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE2NTIwMDg4LCJleHAiOjE3MTY1MjM2ODh9.Ae3efdPSC4P-VzXpbjIsqBn7OxdbWsSSrr2Lk_icTjs
+
+###
+
+# Get post by ID
+GET http://localhost:3000/posts/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
+
+###
+
+# Get comments for a post
+GET http://localhost:3000/posts/1/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
+
+
+//=============================================================================
+###
+# Create a new post
+POST http://localhost:3000/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
+
+{
+  "title": "new Post for final project!!!",
+  "body": "this is a new for final project, this is a new post, this is a new post, this is a new post"
+}
+
+###
+
+# Add a comment to a post
+POST http://localhost:3000/posts/1/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
+
+{
+    "body": "wow wow!!!!, cool final project!!this is a new comment, this is a new comment, this is a new comment, this is a new comment"
+}
+
+###
+
+# Update a post (PATCH)
+PATCH http://localhost:3000/posts/500/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
+
+{
+  "title": "UPDATE update new Title for fianl project new new "
+}
+
+###
+
+# Update a comment (PATCH)
+PATCH http://localhost:3000/posts/1/comments/501
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
+
+{
+  "body": "UPDATE UpdateUPdate I am editing for final project !!and going to delete it soon"
+}
+
+###
+
+# Delete a comment
+DELETE http://localhost:3000/posts/1/comments/505
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJCcmV0IiwiaWF0IjoxNzE0MjgxODY2LCJleHAiOjE3MTQyODU0NjZ9.qEbtJeY2Es6FbR-oUHtTokyNB5Wu2V56aWoj1iY2uB4
